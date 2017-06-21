@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Admin\Documents\Visual Studio 2017\Projects\Recept\Recept\obj\Debug\
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\
 Recept
 none
 false
 DEBUG;TRACE
-C:\Users\Admin\Documents\Visual Studio 2017\Projects\Recept\Recept\App.xaml
+D:\GitKraken Repo\Projekt\Recept\App.xaml
 4306029191
 
 16305037909
 131726951844
 error.xaml;MainWindow.xaml;RecipeCreateView.xaml;ViewReceiepeWindow.xaml;
 
-False
+True
 
