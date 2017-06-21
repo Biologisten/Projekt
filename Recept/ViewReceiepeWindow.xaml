@@ -1,0 +1,21 @@
+﻿<Window x:Class="Recept.ViewReceiepeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Recept"
+        mc:Ignorable="d"
+        Title="ViewReceiepeWindow" Height="460" Width="346" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid>
+        <Frame Content="" HorizontalAlignment="Left" Height="407" Margin="34,12,0,0" VerticalAlignment="Top" Width="277"/>
+        <Border HorizontalAlignment="Left" Height="407" Margin="34,12,0,0" VerticalAlignment="Top" Width="277"/>
+        <Label x:Name="_title" Content="Titel:" HorizontalAlignment="Left" Margin="34,12,0,0" VerticalAlignment="Top" Width="277" Height="27"/>
+        <Label x:Name="_description" Content="Description:" HorizontalAlignment="Left" Margin="34,66,0,0" VerticalAlignment="Top" Height="94" Width="277"/>
+        <Label x:Name="_ingredient" Content="Ingredients:" HorizontalAlignment="Left" Margin="34,160,0,0" VerticalAlignment="Top" Height="140" Width="277"/>
+        <Label x:Name="_date" Content="Publish date:" HorizontalAlignment="Left" Margin="34,300,0,0" VerticalAlignment="Top" Height="27" Width="277"/>
+        <Label x:Name="_category" Content="Category:" HorizontalAlignment="Left" Margin="34,354,0,0" VerticalAlignment="Top" Height="27" Width="234"/>
+        <Label x:Name="_Country" Content="Country:" HorizontalAlignment="Left" Margin="34,381,0,0" VerticalAlignment="Top" Height="27" Width="234"/>
+        <Label x:Name="_author" Content="Author:" HorizontalAlignment="Left" Margin="34,39,0,0" VerticalAlignment="Top" Width="277" Height="27"/>
+        <Label x:Name="_update" Content="Latest Update:" HorizontalAlignment="Left" Margin="34,327,0,0" VerticalAlignment="Top" Height="27" Width="277"/>
+    </Grid>
+</Window>
