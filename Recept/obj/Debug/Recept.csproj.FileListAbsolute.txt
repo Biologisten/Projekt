@@ -18,3 +18,23 @@ C:\Users\Admin\Documents\Visual Studio 2017\Projects\Recept\Recept\obj\Debug\Rec
 C:\Users\Admin\Documents\Visual Studio 2017\Projects\Recept\Recept\obj\Debug\ViewReceiepeWindow.baml
 C:\Users\Admin\documents\visual studio 2017\Projects\Recept\Recept\obj\Debug\error.g.cs
 C:\Users\Admin\documents\visual studio 2017\Projects\Recept\Recept\obj\Debug\error.baml
+D:\GitKraken Repo\Projekt\Recept\bin\Debug\Recept.exe.config
+D:\GitKraken Repo\Projekt\Recept\bin\Debug\Recept.exe
+D:\GitKraken Repo\Projekt\Recept\bin\Debug\Recept.pdb
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept.csprojResolveAssemblyReference.cache
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\error.g.cs
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\MainWindow.g.cs
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\RecipeCreateView.g.cs
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\ViewReceiepeWindow.g.cs
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\App.g.cs
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept_MarkupCompile.cache
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept_MarkupCompile.lref
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\error.baml
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\MainWindow.baml
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\RecipeCreateView.baml
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\ViewReceiepeWindow.baml
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept.g.resources
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept.Properties.Resources.resources
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept.csproj.GenerateResource.Cache
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept.exe
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept.pdb
