@@ -72,5 +72,10 @@ namespace Recept
         {
             return String.Equals(Name.ToLower(), ingredient.Name.ToLower());
         }
+
+        public override string ToString()
+        {
+            return Name + " " + Amount + " " + Unit;
+        }
     }
 }

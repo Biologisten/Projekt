@@ -149,5 +149,10 @@ namespace Recept
         {
             return String.Equals(Title.ToLower(), recipe.Title.ToLower()) && String.Equals(Author.ToLower(), recipe.Author.ToLower());
         }
+
+        public override string ToString()
+        {
+            return Title + " " + Author + " " + Description + " " + Ingredients + " " + Date + " " + Update + " " + Category + " " + Country;
+        }
     }
 }
