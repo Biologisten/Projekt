@@ -8,7 +8,7 @@ namespace Recept
 {
     public class Ingredient
     {
-        private string name; //failsafe om tom
+        private string name; //failsafe om tom?
         private float amount;
         private Unit unit;
 
@@ -77,5 +77,6 @@ namespace Recept
         {
             return Name + " " + Amount + " " + Unit;
         }
+        
     }
 }
