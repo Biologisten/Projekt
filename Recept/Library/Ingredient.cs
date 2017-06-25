@@ -77,6 +77,5 @@ namespace Recept
         {
             return Name + " " + Amount + " " + Unit;
         }
-        
     }
 }
