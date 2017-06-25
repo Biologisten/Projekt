@@ -35,7 +35,7 @@ namespace Recept
             {
                 _ingredient.Text += Environment.NewLine + ingredient.ToString();
             }
-            _date.Text = "Date: " + r.Date;
+            _date.Text = "Created: " + r.Date;
             _update.Text = "Latest Update: " + r.Update;
             _category.Text = "Category: " + r.Category;
             _Country.Text = "Country: " + r.Country;
