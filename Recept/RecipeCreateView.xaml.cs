@@ -47,6 +47,7 @@ namespace Recept
         private void CreateDynamicGridView()
         {
             // Lägga i bibliotek istället?
+            // Skapar gridview
             GridView grid = new GridView();
             grid.AllowsColumnReorder = true;
 
@@ -72,7 +73,7 @@ namespace Recept
             ListView.ItemsSource = ingredients;
         }
 
-        private void PopulateCountryComboBox()
+        private void PopulateCountryComboBox() //Lägger till alla länder till komboboxen
         {
             RegionInfo country = new RegionInfo(new CultureInfo("en-US", false).LCID);
             List<string> countryNames = new List<string>();
@@ -99,7 +100,7 @@ namespace Recept
         private void Unitcheck(Ingredient ingredient)
         {
             //flytta till lib?
-            
+            //kollar vilken enhet som är ifylld
             if (gram.IsChecked == true)
             {
                 ingredient.Unit = Unit.g;
@@ -131,7 +132,7 @@ namespace Recept
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)   //sätter alla värden i ingrediensen och kollar så att allt är okej
         {
             Ingredient ingre = new Ingredient();
             Unitcheck(ingre);
@@ -150,11 +151,12 @@ namespace Recept
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e) //Lägger till receptet i receptlistan
         {
             Recipe recipe = new Recipe(titeltxt.Text, authortxt.Text, descriptiontxt.Text, ingredients, DateTime.Now, DateTime.Now, categorytxt.Text, countrybox.Text);
             if (mainwindow.AddRecipe(recipe) == true)
             {
+                mainwindow.RecipeBox.Items.Refresh();
                 this.Close();
             }
             else

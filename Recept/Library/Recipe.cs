@@ -145,24 +145,14 @@ namespace Recept
             return IsEqual((Recipe)value);
         }
 
-        public bool Equals(Recipe recipe)
-        {
-            if (ReferenceEquals(null, recipe))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, recipe))
-            {
-                return true;
-            }
-
-            return IsEqual(recipe);
-        }
-
         private bool IsEqual(Recipe recipe)
         {
             return String.Equals(Title.ToLower(), recipe.Title.ToLower()) && String.Equals(Author.ToLower(), recipe.Author.ToLower());
+        }
+
+        public override string ToString()
+        {
+            return Title + " " + Author + " " + Description + " " + Ingredients + " " + Date + " " + Update + " " + Category + " " + Country;
         }
     }
 }

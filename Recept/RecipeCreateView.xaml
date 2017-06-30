@@ -7,23 +7,15 @@
         mc:Ignorable="d"
         Title="Recept" Height="449" Width="450" WindowStartupLocation="CenterOwner" ResizeMode="CanMinimize">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="195*"/>
-            <ColumnDefinition Width="197*"/>
-        </Grid.ColumnDefinitions>
-        <Label x:Name="titel_author" Content="Titel:" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Width="38" Height="28" FontSize="14"/>
-        <Label x:Name="_description" Content="Description:" HorizontalAlignment="Left" Margin="5,106,0,0" VerticalAlignment="Top" Height="28" Width="74" AutomationProperties.Name="description"/>
-        <Label x:Name="_ngredient" Content="Ingredients:" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="27" Width="76" Grid.Column="1"/>
-        <Label x:Name="_category" Content="Category:" HorizontalAlignment="Left" Margin="5,225,0,0" VerticalAlignment="Top" Height="26" Width="62"/>
-        <Label x:Name="_Country" Content="Country:" HorizontalAlignment="Left" Margin="5,199,0,0" VerticalAlignment="Top" Height="26" Width="62"/>
-        <Label x:Name="titel_author_Copy" Content="Author:" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="51" Height="28"/>
-        <TextBox x:Name="titeltxt" Padding="2" TextWrapping="Wrap" Margin="48,27,30,365" AutomationProperties.IsRequiredForForm="True"/>
-        <TextBox x:Name="authortxt" Padding="2" TextWrapping="Wrap" Margin="61,71,30,321" AutomationProperties.IsRequiredForForm="True"/>
-        <TextBox x:Name="descriptiontxt" Padding="2" TextWrapping="Wrap" Margin="10,134,30,232" AutomationProperties.IsRequiredForForm="True"/>
-        <ComboBox x:Name="categorytxt" HorizontalAlignment="Left" Margin="67,225,0,0" VerticalAlignment="Top" Width="104" Height="26">
+        <Label x:Name="titel_author" Content="Titel:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="38" Height="28" FontSize="14"/>
+        <Label x:Name="_description" Content="Description:" HorizontalAlignment="Left" Margin="22,146,0,0" VerticalAlignment="Top" Height="28" Width="74" AutomationProperties.Name="description"/>
+        <Label x:Name="_category" Content="Category:" HorizontalAlignment="Left" Margin="0,307,0,0" VerticalAlignment="Top" Height="26" Width="62"/>
+        <Label x:Name="_Country" Content="Country:" HorizontalAlignment="Left" Margin="0,281,0,0" VerticalAlignment="Top" Height="26" Width="62"/>
+        <Label x:Name="titel_author_Copy" Content="Author:" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="51" Height="28"/>
+        <TextBox x:Name="titeltxt" Padding="4" TextWrapping="Wrap" Margin="53,10,290,372" AutomationProperties.IsRequiredForForm="True"/>
+        <TextBox x:Name="authortxt" Padding="4" TextWrapping="Wrap" Margin="67,63,273,319" AutomationProperties.IsRequiredForForm="True"/>
+        <TextBox x:Name="descriptiontxt" Padding="2" TextWrapping="Wrap" Margin="23,174,243,156" AutomationProperties.IsRequiredForForm="True"/>
+        <ComboBox x:Name="categorytxt" HorizontalAlignment="Left" Margin="67,307,0,0" VerticalAlignment="Top" Width="104" Height="26">
             <ComboBoxItem Content="Fast Food" HorizontalAlignment="Left" Width="102"/>
             <ComboBoxItem Content="Homemade" HorizontalAlignment="Left" Width="102"/>
             <ComboBoxItem Content="Grilled" HorizontalAlignment="Left" Width="102"/>
@@ -31,31 +23,30 @@
             <ComboBoxItem Content="Vegetarian" HorizontalAlignment="Left" Width="102"/>
             <ComboBoxItem Content="Other" HorizontalAlignment="Left" Width="102"/>
         </ComboBox>
-        <ComboBox x:Name="countrybox" HorizontalAlignment="Left" Margin="67,199,0,0" VerticalAlignment="Top" Width="104" Height="26">
+        <ComboBox x:Name="countrybox" HorizontalAlignment="Left" Margin="67,281,0,0" VerticalAlignment="Top" Width="104" Height="26">
             <ComboBoxItem/>
 
         </ComboBox>
         <Button Grid.ColumnSpan="2" Content="Apply" HorizontalAlignment="Left" Margin="150,349,0,0" VerticalAlignment="Top" Width="142" Height="38" Click="Button_Click"/>
-        <ListView x:Name="ListView" Grid.Column="1" HorizontalAlignment="Left" Height="74" Margin="71,10,0,0" VerticalAlignment="Top" Width="117">
+        <ListView x:Name="ListView" HorizontalAlignment="Left" Height="119" Margin="249,10,0,0" VerticalAlignment="Top" Width="185">
             <ListView.View>
                 <GridView AllowsColumnReorder="True">
-                    <GridViewColumn Width="37" Header="Name"/>
-                    <GridViewColumn Width="48" Header="Amount"/>
-                    <GridViewColumn Width="27" Header="Unit"/>
+                    <GridViewColumn Width="75" Header="Name"/>
+                    <GridViewColumn Width="55" Header="Amount"/>
+                    <GridViewColumn Width="50" Header="Unit"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBox x:Name="ingredientname" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="71,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"/>
-        <Label Content="Name:" Grid.Column="1" HorizontalAlignment="Left" Margin="22,86,0,0" VerticalAlignment="Top"/>
-        <Label Content="Amount:" Grid.Column="1" HorizontalAlignment="Left" Margin="11,112,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="ingredientamount" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="71,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"/>
-        <RadioButton x:Name="gram" Content="g" Grid.Column="1" HorizontalAlignment="Left" Margin="71,139,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="milliliter" Content="ml" Grid.Column="1" HorizontalAlignment="Left" Margin="69,154,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="kilogram" Content="Kg" Grid.Column="1" HorizontalAlignment="Left" Margin="102,139,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="deciliter" Content="dl" Grid.Column="1" HorizontalAlignment="Left" Margin="106,154,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="liter" Content="L" Grid.Column="1" HorizontalAlignment="Left" Margin="140,154,0,0" VerticalAlignment="Top" Width="26"/>
-        <Button Content="Add" Grid.Column="1" HorizontalAlignment="Left" Margin="71,189,0,0" VerticalAlignment="Top" Width="107" Height="36" Click="Button_Click_1"/>
-        <RadioButton x:Name="none" Content="None" Grid.Column="1" HorizontalAlignment="Left" Margin="140,139,0,0" VerticalAlignment="Top" Width="48"/>
+        <TextBox x:Name="ingredientname" HorizontalAlignment="Left" Height="28" Margin="299,146,0,0" Padding="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Height="35" Margin="249,143,0,0" VerticalAlignment="Top" Padding="8"/>
+        <Label Content="Amount:" HorizontalAlignment="Left" Height="35" Margin="238,183,0,0" VerticalAlignment="Top" Padding="8"/>
+        <TextBox x:Name="ingredientamount" HorizontalAlignment="Left" Height="28" Margin="299,183,0,0" Padding="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"/>
+        <RadioButton x:Name="gram" Content="g" HorizontalAlignment="Left" Margin="325,231,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="milliliter" Content="ml" HorizontalAlignment="Left" Margin="313,251,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="kilogram" Content="Kg" HorizontalAlignment="Left" Margin="356,231,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="deciliter" Content="dl" HorizontalAlignment="Left" Margin="350,251,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="liter" Content="L" HorizontalAlignment="Left" Margin="384,251,0,0" VerticalAlignment="Top" Width="26"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="303,271,0,0" VerticalAlignment="Top" Width="107" Height="36" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

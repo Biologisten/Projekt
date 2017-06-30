@@ -8,7 +8,7 @@ namespace Recept
 {
     public class Ingredient
     {
-        private string name; //failsafe om tom
+        private string name; //failsafe om tom?
         private float amount;
         private Unit unit;
 
@@ -68,24 +68,14 @@ namespace Recept
             return IsEqual((Ingredient)value);
         }
 
-        public bool Equals(Ingredient ingredient)
-        {
-            if (ReferenceEquals(null, ingredient))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, ingredient))
-            {
-                return true;
-            }
-
-            return IsEqual(ingredient);
-        }
-
         private bool IsEqual(Ingredient ingredient)
         {
             return String.Equals(Name.ToLower(), ingredient.Name.ToLower());
+        }
+
+        public override string ToString()
+        {
+            return Name + " " + Amount + " " + Unit;
         }
     }
 }
