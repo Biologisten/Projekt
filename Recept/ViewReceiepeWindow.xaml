@@ -9,13 +9,13 @@
     <Grid>
         <Frame Content="" HorizontalAlignment="Left" Height="407" Margin="34,12,0,0" VerticalAlignment="Top" Width="277"/>
         <Border HorizontalAlignment="Left" Height="407" Margin="34,12,0,0" VerticalAlignment="Top" Width="277"/>
-        <Label x:Name="_title" Content="Titel:" HorizontalAlignment="Left" Margin="34,12,0,0" VerticalAlignment="Top" Width="277" Height="27"/>
-        <Label x:Name="_description" Content="Description:" HorizontalAlignment="Left" Margin="34,66,0,0" VerticalAlignment="Top" Height="94" Width="277"/>
-        <Label x:Name="_ingredient" Content="Ingredients:" HorizontalAlignment="Left" Margin="34,160,0,0" VerticalAlignment="Top" Height="140" Width="277"/>
-        <Label x:Name="_date" Content="Publish date:" HorizontalAlignment="Left" Margin="34,300,0,0" VerticalAlignment="Top" Height="27" Width="277"/>
-        <Label x:Name="_category" Content="Category:" HorizontalAlignment="Left" Margin="34,354,0,0" VerticalAlignment="Top" Height="27" Width="234"/>
-        <Label x:Name="_Country" Content="Country:" HorizontalAlignment="Left" Margin="34,381,0,0" VerticalAlignment="Top" Height="27" Width="234"/>
-        <Label x:Name="_author" Content="Author:" HorizontalAlignment="Left" Margin="34,39,0,0" VerticalAlignment="Top" Width="277" Height="27"/>
-        <Label x:Name="_update" Content="Latest Update:" HorizontalAlignment="Left" Margin="34,327,0,0" VerticalAlignment="Top" Height="27" Width="277"/>
+        <TextBox x:Name="_title" Text="Titel:" HorizontalAlignment="Left" Margin="34,12,0,0" VerticalAlignment="Top" Width="277" Height="27" BorderThickness="0"/>
+        <TextBox x:Name="_description" Text="Description:" HorizontalAlignment="Left" Margin="34,66,0,0" VerticalAlignment="Top" Height="94" Width="277" BorderThickness="0"/>
+        <TextBox x:Name="_ingredient" Text="Ingredients:" HorizontalAlignment="Left" Margin="34,160,0,0" VerticalAlignment="Top" Height="140" Width="277" IsReadOnly="True" BorderThickness="0"/>
+        <TextBox x:Name="_date" Text="Created:" HorizontalAlignment="Left" Margin="34,300,0,0" VerticalAlignment="Top" Height="27" Width="277" BorderThickness="0"/>
+        <TextBox x:Name="_category" Text="Category:" HorizontalAlignment="Left" Margin="34,354,0,0" VerticalAlignment="Top" Height="27" Width="234" BorderThickness="0"/>
+        <TextBox x:Name="_Country" Text="Country:" HorizontalAlignment="Left" Margin="34,381,0,0" VerticalAlignment="Top" Height="27" Width="234" BorderThickness="0"/>
+        <TextBox x:Name="_author" Text="Author:" HorizontalAlignment="Left" Margin="34,39,0,0" VerticalAlignment="Top" Width="277" Height="27" BorderThickness="0"/>
+        <TextBox x:Name="_update" Text="Latest Update:" HorizontalAlignment="Left" Margin="34,327,0,0" VerticalAlignment="Top" Height="27" Width="277" BorderThickness="0"/>
     </Grid>
 </Window>

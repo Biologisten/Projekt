@@ -27,18 +27,18 @@ namespace Recept
 
         public void Viewer(Recipe r)
         {
-            _title.Content = "Title: " + r.Title;
-            _author.Content = "Author:" + r.Author;
-            _description.Content = "Description: " + r.Description;
-            _ingredient.Content = "Ingredients:";
+            _title.Text = "Title: " + r.Title;
+            _author.Text = "Author:" + r.Author;
+            _description.Text = "Description: " + r.Description;
+            _ingredient.Text = "Ingredients:";
             foreach (Ingredient ingredient in r.Ingredients)
             {
-                _ingredient.Content += Environment.NewLine + ingredient.Name + "    Amount: " + ingredient.Amount + " " + ingredient.Unit;
+                _ingredient.Text += Environment.NewLine + ingredient.ToString();
             }
-            _date.Content = "Date: " + r.Date;
-            _update.Content = "Latest Update: " + r.Update;
-            _category.Content = "Category: " + r.Category;
-            _Country.Content = "Country: " + r.Country;
+            _date.Text = "Created: " + r.Date;
+            _update.Text = "Latest Update: " + r.Update;
+            _category.Text = "Category: " + r.Category;
+            _Country.Text = "Country: " + r.Country;
         }
     }
 }

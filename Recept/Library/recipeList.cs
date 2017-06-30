@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,18 @@ namespace Recept
             return true;
         }
 
-        public Recipe Load(int i)
+        public Recipe Load(int i, Exception error)
         {
+            if (i < 0)
+            {
+                throw error;
+            }
             return list[i];
+        }
+
+        public void Sorterare()
+        {
+            list.Sort((s1, s2) => s1.Title.CompareTo(s2.Title));
         }
     }
 }
