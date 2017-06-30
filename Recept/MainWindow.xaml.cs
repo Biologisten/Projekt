@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,11 +21,13 @@ namespace Recept
     /// </summary>
     public partial class MainWindow : Window
     {
-        public recipeList recipelist = new recipeList();
+        private recipeList recipelist = new recipeList();
+        private SortDescription sort;
 
         public MainWindow()
         {
             InitializeComponent();
+            RecipeGridview();
         }
 
         public bool AddRecipe(Recipe recipe)
@@ -50,8 +53,26 @@ namespace Recept
             var recipewindow = new ViewReceiepeWindow();
             recipewindow.Owner = this;
             recipewindow.Show();
-            Recipe r = recipelist.Load(RecipeBox.SelectedIndex);
+            Recipe r = recipelist.Load(RecipeBox.SelectedIndex, new Exception());
             recipewindow.Viewer(r);
+        }
+
+        private void RecipeGridview()
+        {
+            GridView grid = new GridView();
+            grid.AllowsColumnReorder = true;
+
+            GridViewColumn titleColumn = new GridViewColumn();
+            titleColumn.DisplayMemberBinding = new Binding("Title");
+            titleColumn.Header = "Title";
+            titleColumn.Width = 241;
+            grid.Columns.Add(titleColumn);
+        }
+
+        private void GridViewColumnHeader_Click(object sender, RoutedEventArgs e)
+        {
+            recipelist.Sorterare();
+            //RecipeBox.ItemsSource = recipelist;
         }
     }
 }
