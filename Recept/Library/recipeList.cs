@@ -32,7 +32,8 @@ namespace Recept
 
         public void Sorterare()
         {
-            list.Sort((s1, s2) => s1.Title.CompareTo(s2.Title));
+            list = list.OrderBy(i => i).ToList();
+            list = list.OrderByDescending(i => i).ToList();
         }
     }
 }
