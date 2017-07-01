@@ -72,7 +72,6 @@ namespace Recept
         private void GridViewColumnHeader_Click(object sender, RoutedEventArgs e)
         {
             recipelist.Sorterare();
-            //RecipeBox.ItemsSource = recipelist;
         }
     }
 }
