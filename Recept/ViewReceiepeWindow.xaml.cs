@@ -28,7 +28,7 @@ namespace Recept
         public void Viewer(Recipe r)
         {
             _title.Text = "Title: " + r.Title;
-            _author.Text = "Author:" + r.Author;
+            _author.Text = "Author: " + r.Author;
             _description.Text = "Description: " + r.Description;
             _ingredient.Text = "Ingredients:";
             foreach (Ingredient ingredient in r.Ingredients)
