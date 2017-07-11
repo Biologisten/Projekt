@@ -1,4 +1,3 @@
 ﻿language: csharp
-solution: Recept.sln
 notifications:
-slack: kradox:ChS0vBrnDOfS7eHdsP6uai2s
+	slack: kradox:ChS0vBrnDOfS7eHdsP6uai2s
