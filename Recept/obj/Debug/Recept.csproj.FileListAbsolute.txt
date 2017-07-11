@@ -21,7 +21,6 @@ C:\Users\Admin\documents\visual studio 2017\Projects\Recept\Recept\obj\Debug\err
 D:\GitKraken Repo\Projekt\Recept\bin\Debug\Recept.exe.config
 D:\GitKraken Repo\Projekt\Recept\bin\Debug\Recept.exe
 D:\GitKraken Repo\Projekt\Recept\bin\Debug\Recept.pdb
-D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept.csprojResolveAssemblyReference.cache
 D:\GitKraken Repo\Projekt\Recept\obj\Debug\error.g.cs
 D:\GitKraken Repo\Projekt\Recept\obj\Debug\MainWindow.g.cs
 D:\GitKraken Repo\Projekt\Recept\obj\Debug\RecipeCreateView.g.cs
