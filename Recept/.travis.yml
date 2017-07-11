@@ -1,0 +1,5 @@
+﻿language: csharp
+solution: Recept.sln
+notifications:
+slack: kradox:ChS0vBrnDOfS7eHdsP6uai2s
+travis encrypt "kradox:ChS0vBrnDOfS7eHdsP6uai2s" --add notifications.slack
