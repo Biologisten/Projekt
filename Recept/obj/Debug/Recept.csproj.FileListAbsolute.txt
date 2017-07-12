@@ -37,3 +37,4 @@ D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept.Properties.Resources.resources
 D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept.csproj.GenerateResource.Cache
 D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept.exe
 D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept.pdb
+D:\GitKraken Repo\Projekt\Recept\obj\Debug\Recept.csprojResolveAssemblyReference.cache

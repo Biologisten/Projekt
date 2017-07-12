@@ -22,7 +22,6 @@ namespace Recept
     public partial class MainWindow : Window
     {
         private recipeList recipelist = new recipeList();
-        private SortDescription sort;
 
         public MainWindow()
         {
