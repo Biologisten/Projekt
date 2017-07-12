@@ -3,6 +3,7 @@ build:
   shell: mingw32
   pull: true
   commands:
-    - ./configure
+    - cmd /c dir
+    - cmd /c "echo %WINDIR%"
     - make
     - make check
