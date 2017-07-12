@@ -5,4 +5,4 @@ Programmets syfte är att låta användaren skapa recept, som programmet spara i
 
 [![Build status](https://ci.appveyor.com/api/projects/status/conoia28u850mxmq?svg=true)](https://ci.appveyor.com/project/Biologisten/projekt)
 
-[![Github All Releases](https://img.shields.io/github/downloads/Biologisten/projekt/total.svg)](https://github.com/Biologisten/projekt/tree/development)
+[![Github All Releases](https://img.shields.io/github/downloads/Biologisten/projekt/total.svg)](https://github.com/Biologisten/Projekt/tree/develop)
