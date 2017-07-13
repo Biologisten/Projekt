@@ -21,7 +21,7 @@ namespace Recept
     /// </summary>
     public partial class MainWindow : Window
     {
-        private recipeList recipelist = new recipeList();
+        private RecipeList recipelist = new RecipeList();
 
         public MainWindow()
         {
@@ -64,13 +64,28 @@ namespace Recept
             GridViewColumn titleColumn = new GridViewColumn();
             titleColumn.DisplayMemberBinding = new Binding("Title");
             titleColumn.Header = "Title";
-            titleColumn.Width = 241;
+            titleColumn.Width = 122;
             grid.Columns.Add(titleColumn);
+
+            GridViewColumn authorColumn = new GridViewColumn();
+            authorColumn.DisplayMemberBinding = new Binding("Author");
+            authorColumn.Header = "Author";
+            authorColumn.Width = 122;
+            grid.Columns.Add(authorColumn);
         }
 
         private void GridViewColumnHeader_Click(object sender, RoutedEventArgs e)
         {
-            recipelist.Sorterare();
+            recipelist.Sorterare(sender);
+            RecipeBox.Items.Clear();
+            recipelist.Refresher(this);
+        }
+
+        private void GridViewColumnHeader_Click_1(object sender, RoutedEventArgs e)
+        {
+            recipelist.Sorterare(sender);
+            RecipeBox.Items.Clear();
+            recipelist.Refresher(this);
         }
     }
 }

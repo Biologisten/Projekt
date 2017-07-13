@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Recept
 {
-    public class recipeList
+    public class RecipeList
     {
         private List<Recipe> list = new List<Recipe>();
 
@@ -30,15 +30,37 @@ namespace Recept
             return list[i];
         }
 
-        public void Sorterare()
+        public void Sorterare(object sender)
         {
-            if (list == list.OrderBy(i => i))
+            if (sender == "Title")
             {
-                list = list.OrderByDescending(i => i).ToList();
+                if (list.OrderBy(str => str.Title).SequenceEqual(list))
+                {
+                    list = list.OrderByDescending(str => str.Title.ToString()).ToList();
+                }
+                else
+                {
+                    list = list.OrderBy(str => str.Title.ToString()).ToList();
+                }
             }
             else
             {
-                list = list.OrderBy(i => i).ToList();
+                if (list.OrderBy(str => str.Author).SequenceEqual(list))
+                {
+                    list = list.OrderByDescending(str => str.Author.ToString()).ToList();
+                }
+                else
+                {
+                    list = list.OrderBy(str => str.Author.ToString()).ToList();
+                }
+            }
+        }
+
+        public void Refresher(MainWindow window)
+        {
+            foreach (Recipe recipe in list)
+            {
+                window.RecipeBox.Items.Add(recipe.Title);
             }
         }
     }
