@@ -152,6 +152,11 @@ namespace Recept
 
         public override string ToString()
         {
+            return Title + Author;
+        }
+
+        public string ToString(int i)
+        {
             return Title + " " + Author + " " + Description + " " + Ingredients + " " + Date + " " + Update + " " + Category + " " + Country;
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -30,37 +31,39 @@ namespace Recept
             return list[i];
         }
 
-        public void Sorterare(object sender)
+        public List<Recipe> Sorterare(string sender)
         {
             if (sender == "Title")
             {
-                if (list.OrderBy(str => str.Title).SequenceEqual(list))
+                var sortedlist = list.OrderBy(str => str.Title);
+                if (sortedlist.SequenceEqual(list))
                 {
                     list = list.OrderByDescending(str => str.Title.ToString()).ToList();
+                    return list;
                 }
                 else
                 {
                     list = list.OrderBy(str => str.Title.ToString()).ToList();
+                    return list;
                 }
+            }
+            else if (sender == "Source")
+            {
+                return list;
             }
             else
             {
-                if (list.OrderBy(str => str.Author).SequenceEqual(list))
+                var sortedlist = list.OrderBy(str => str.Author);
+                if (sortedlist.SequenceEqual(list))
                 {
                     list = list.OrderByDescending(str => str.Author.ToString()).ToList();
+                    return list;
                 }
                 else
                 {
                     list = list.OrderBy(str => str.Author.ToString()).ToList();
+                    return list;
                 }
-            }
-        }
-
-        public void Refresher(MainWindow window)
-        {
-            foreach (Recipe recipe in list)
-            {
-                window.RecipeBox.Items.Add(recipe.Title);
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,14 +27,12 @@ namespace Recept
         public MainWindow()
         {
             InitializeComponent();
-            RecipeGridview();
         }
 
         public bool AddRecipe(Recipe recipe)
         {
             if (recipelist.Add(recipe) == true)
             {
-                RecipeBox.Items.Add(recipe.Title);
                 return true;
             }
             return false;
@@ -56,36 +55,16 @@ namespace Recept
             recipewindow.Viewer(r);
         }
 
-        private void RecipeGridview()
+        private void GridViewColumnHeader_Click(object sender, RoutedEventArgs e) //Title header
         {
-            GridView grid = new GridView();
-            grid.AllowsColumnReorder = true;
-
-            GridViewColumn titleColumn = new GridViewColumn();
-            titleColumn.DisplayMemberBinding = new Binding("Title");
-            titleColumn.Header = "Title";
-            titleColumn.Width = 122;
-            grid.Columns.Add(titleColumn);
-
-            GridViewColumn authorColumn = new GridViewColumn();
-            authorColumn.DisplayMemberBinding = new Binding("Author");
-            authorColumn.Header = "Author";
-            authorColumn.Width = 122;
-            grid.Columns.Add(authorColumn);
+            RecipeBox.ItemsSource = recipelist.Sorterare("Title");
+            RecipeBox.Items.Refresh();
         }
 
-        private void GridViewColumnHeader_Click(object sender, RoutedEventArgs e)
-        {
-            recipelist.Sorterare(sender);
-            RecipeBox.Items.Clear();
-            recipelist.Refresher(this);
-        }
-
-        private void GridViewColumnHeader_Click_1(object sender, RoutedEventArgs e)
-        {
-            recipelist.Sorterare(sender);
-            RecipeBox.Items.Clear();
-            recipelist.Refresher(this);
+        private void GridViewColumnHeader_Click_1(object sender, RoutedEventArgs e) //Author header
+       {
+            RecipeBox.ItemsSource = recipelist.Sorterare("Author");
+            RecipeBox.Items.Refresh();
         }
     }
 }

@@ -10,11 +10,11 @@
         <ListView x:Name="RecipeBox" Margin="29,51,29,105">
         <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="122">
-                        <GridViewColumnHeader Tag="Title" Click="GridViewColumnHeader_Click" Width="122">Title</GridViewColumnHeader>
+                    <GridViewColumn Width="122" DisplayMemberBinding="{Binding Path=Title}">
+                        <GridViewColumnHeader x:Name="titleColumn" Tag="Title" Click="GridViewColumnHeader_Click" Width="122">Title</GridViewColumnHeader>
                     </GridViewColumn>
-                    <GridViewColumn Width="122">
-                        <GridViewColumnHeader Tag="Author" Click="GridViewColumnHeader_Click_1" Width="122">Author</GridViewColumnHeader>
+                    <GridViewColumn Width="122" DisplayMemberBinding="{Binding Path=Author}">
+                        <GridViewColumnHeader x:Name="authorColumn" Tag="Author" Click="GridViewColumnHeader_Click_1" Width="122">Author</GridViewColumnHeader>
                     </GridViewColumn>
                 </GridView>
         </ListView.View>
