@@ -22,7 +22,7 @@ namespace Recept
     /// </summary>
     public partial class MainWindow : Window
     {
-        private RecipeList recipelist = new RecipeList();
+        public RecipeList recipelist = new RecipeList();
 
         public MainWindow()
         {
@@ -58,13 +58,11 @@ namespace Recept
         private void GridViewColumnHeader_Click(object sender, RoutedEventArgs e) //Title header
         {
             RecipeBox.ItemsSource = recipelist.Sorterare("Title");
-            RecipeBox.Items.Refresh();
         }
 
         private void GridViewColumnHeader_Click_1(object sender, RoutedEventArgs e) //Author header
        {
             RecipeBox.ItemsSource = recipelist.Sorterare("Author");
-            RecipeBox.Items.Refresh();
         }
     }
 }

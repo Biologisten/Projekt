@@ -156,6 +156,7 @@ namespace Recept
             Recipe recipe = new Recipe(titeltxt.Text, authortxt.Text, descriptiontxt.Text, ingredients, DateTime.Now, DateTime.Now, categorytxt.Text, countrybox.Text);
             if (mainwindow.AddRecipe(recipe) == true)
             {
+                mainwindow.RecipeBox.ItemsSource = mainwindow.recipelist.Sorterare("Source");
                 mainwindow.RecipeBox.Items.Refresh();
                 this.Close();
             }
