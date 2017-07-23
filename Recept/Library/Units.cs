@@ -9,10 +9,12 @@ namespace Recept
     public enum Unit
     {
         None,
+        mg,
         g,
         Kg,
         ml,
         dl,
-        L
+        L,
+        st
     }
 }

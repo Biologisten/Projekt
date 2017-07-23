@@ -101,16 +101,21 @@ namespace Recept
         {
             //flytta till lib?
             //kollar vilken enhet som är ifylld
-            if (gram.IsChecked == true)
+            if (mgram.IsChecked == true)
+            {
+                ingredient.Unit = Unit.mg;
+            }
+
+            else if (gram.IsChecked == true)
             {
                 ingredient.Unit = Unit.g;
             }
-
+     
             else if (kilogram.IsChecked == true)
             {
                 ingredient.Unit = Unit.Kg;
             }
-     
+
             else if (milliliter.IsChecked == true)
             {
                 ingredient.Unit = Unit.ml;
@@ -121,15 +126,26 @@ namespace Recept
                 ingredient.Unit = Unit.dl;
             }
 
-            else if (liter.IsChecked == true)
+            else if(liter.IsChecked == true)
             {
                 ingredient.Unit = Unit.L;
+            }
+
+            else if(stycke.IsChecked == true)
+            {
+                ingredient.Unit = Unit.st;
             }
 
             else
             {
                 ingredient.Unit = Unit.None;
             }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            ingredients.RemoveAt(ListView.SelectedIndex);
+            ListView.Items.Refresh();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)   //sätter alla värden i ingrediensen och kollar så att allt är okej

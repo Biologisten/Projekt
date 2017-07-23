@@ -41,12 +41,15 @@
         <Label Content="Name:" HorizontalAlignment="Left" Height="35" Margin="249,143,0,0" VerticalAlignment="Top" Padding="8"/>
         <Label Content="Amount:" HorizontalAlignment="Left" Height="35" Margin="238,183,0,0" VerticalAlignment="Top" Padding="8"/>
         <TextBox x:Name="ingredientamount" HorizontalAlignment="Left" Height="28" Margin="299,183,0,0" Padding="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"/>
-        <RadioButton x:Name="gram" Content="g" HorizontalAlignment="Left" Margin="325,231,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="milliliter" Content="ml" HorizontalAlignment="Left" Margin="313,251,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="kilogram" Content="Kg" HorizontalAlignment="Left" Margin="356,231,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="deciliter" Content="dl" HorizontalAlignment="Left" Margin="350,251,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="liter" Content="L" HorizontalAlignment="Left" Margin="384,251,0,0" VerticalAlignment="Top" Width="26"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="303,271,0,0" VerticalAlignment="Top" Width="107" Height="36" Click="Button_Click_1"/>
+        <RadioButton x:Name="gram" Content="g" HorizontalAlignment="Left" Margin="340,223,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="milliliter" Content="ml" HorizontalAlignment="Left" Margin="300,243,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="kilogram" Content="kg" HorizontalAlignment="Left" Margin="371,223,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="deciliter" Content="dl" HorizontalAlignment="Left" Margin="337,243,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="liter" Content="L" HorizontalAlignment="Left" Margin="371,243,0,0" VerticalAlignment="Top" Width="26"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="281,289,0,0" VerticalAlignment="Top" Width="60" Height="26" Click="Button_Click_1"/>
+        <Button Content="Remove" HorizontalAlignment="Left" Margin="356,289,0,0" VerticalAlignment="Top" Width="60" Height="26" Click="Button_Click_2"/>
+        <RadioButton x:Name="mgram" Content="mg" HorizontalAlignment="Left" Margin="299,223,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="stycke" Content="st" HorizontalAlignment="Left" Margin="337,263,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

@@ -20,7 +20,8 @@
         </ListView.View>
         </ListView>
         <Label Content="Recipe:" HorizontalAlignment="Left" Margin="29,25,0,0" VerticalAlignment="Top" Height="26" Width="57"/>
-        <Button Content="Add new recipe" HorizontalAlignment="Left" Margin="10,421,0,0" VerticalAlignment="Top" Width="121" Height="32" Click="Button_Click"/>
-        <Button Content="Show recipe" HorizontalAlignment="Left" Margin="162,421,0,0" VerticalAlignment="Top" Width="119" Height="32" Click="Button_Click_1"/>
+        <Button Content="Add new recipe" HorizontalAlignment="Left" Margin="29,371,0,0" VerticalAlignment="Top" Width="121" Height="32" Click="Button_Click"/>
+        <Button Content="Show recipe" HorizontalAlignment="Left" Margin="94,408,0,0" VerticalAlignment="Top" Width="119" Height="32" Click="Button_Click_1"/>
+        <Button Content="Edit" HorizontalAlignment="Left" Margin="156,371,0,0" VerticalAlignment="Top" Width="121" Height="32" Click="Button_Click_2"/>
     </Grid>
 </Window>
