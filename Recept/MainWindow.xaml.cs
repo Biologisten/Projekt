@@ -55,11 +55,6 @@ namespace Recept
             recipewindow.Viewer(r);
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            recipelist.Edit(RecipeBox.SelectedIndex, new Exception());
-        }
-
         private void GridViewColumnHeader_Click(object sender, RoutedEventArgs e) //Title header
         {
             RecipeBox.ItemsSource = recipelist.Sorterare("Title");

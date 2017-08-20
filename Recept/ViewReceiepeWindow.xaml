@@ -11,11 +11,12 @@
         <Border HorizontalAlignment="Left" Height="407" Margin="34,12,0,0" VerticalAlignment="Top" Width="277"/>
         <TextBox x:Name="_title" Text="Titel:" HorizontalAlignment="Left" Margin="34,12,0,0" VerticalAlignment="Top" Width="277" Height="27" BorderThickness="0"/>
         <TextBox x:Name="_description" Text="Description:" HorizontalAlignment="Left" Margin="34,66,0,0" VerticalAlignment="Top" Height="94" Width="277" BorderThickness="0"/>
-        <TextBox x:Name="_ingredient" Text="Ingredients:" HorizontalAlignment="Left" Margin="34,160,0,0" VerticalAlignment="Top" Height="140" Width="277" IsReadOnly="True" BorderThickness="0"/>
-        <TextBox x:Name="_date" Text="Created:" HorizontalAlignment="Left" Margin="34,300,0,0" VerticalAlignment="Top" Height="27" Width="277" BorderThickness="0"/>
-        <TextBox x:Name="_category" Text="Category:" HorizontalAlignment="Left" Margin="34,354,0,0" VerticalAlignment="Top" Height="27" Width="234" BorderThickness="0"/>
-        <TextBox x:Name="_Country" Text="Country:" HorizontalAlignment="Left" Margin="34,381,0,0" VerticalAlignment="Top" Height="27" Width="234" BorderThickness="0"/>
+        <TextBox x:Name="_ingredient" Text="Ingredients:" HorizontalAlignment="Left" Margin="34,160,0,0" VerticalAlignment="Top" Height="56" Width="277" IsReadOnly="True" BorderThickness="0"/>
+        <TextBox x:Name="_date" Text="Created:" HorizontalAlignment="Left" Margin="34,216,0,0" VerticalAlignment="Top" Height="27" Width="277" BorderThickness="0"/>
+        <TextBox x:Name="_category" Text="Category:" HorizontalAlignment="Left" Margin="34,270,0,0" VerticalAlignment="Top" Height="27" Width="234" BorderThickness="0"/>
+        <TextBox x:Name="_Country" Text="Country:" HorizontalAlignment="Left" Margin="34,297,0,0" VerticalAlignment="Top" Height="27" Width="234" BorderThickness="0"/>
         <TextBox x:Name="_author" Text="Author:" HorizontalAlignment="Left" Margin="34,39,0,0" VerticalAlignment="Top" Width="277" Height="27" BorderThickness="0"/>
-        <TextBox x:Name="_update" Text="Latest Update:" HorizontalAlignment="Left" Margin="34,327,0,0" VerticalAlignment="Top" Height="27" Width="277" BorderThickness="0"/>
+        <TextBox x:Name="_update" Text="Latest Update:" HorizontalAlignment="Left" Margin="34,243,0,0" VerticalAlignment="Top" Height="27" Width="277" BorderThickness="0"/>
+        <Button x:Name="_save" Margin="122,390,130,12" Content="Save" Click="_save_Click" />
     </Grid>
 </Window>

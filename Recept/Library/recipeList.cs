@@ -31,15 +31,6 @@ namespace Recept
             return list[i];
         }
 
-        public Recipe Edit(int i, Exception error) //Ska öppna createview/editview med ifyllda värden
-        {
-            if (i < 0)
-            {
-                throw error;
-            }
-            return list[i];
-        }
-
         public List<Recipe> Sorterare(string sender)
         {
             if (sender == "Title")

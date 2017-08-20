@@ -40,5 +40,10 @@ namespace Recept
             _category.Text = "Category: " + r.Category;
             _Country.Text = "Country: " + r.Country;
         }
+
+        private void _save_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
