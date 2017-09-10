@@ -24,7 +24,6 @@
             <ComboBoxItem Content="Other" HorizontalAlignment="Left" Width="102"/>
         </ComboBox>
         <ComboBox x:Name="countrybox" HorizontalAlignment="Left" Margin="67,281,0,0" VerticalAlignment="Top" Width="104" Height="26">
-            <ComboBoxItem/>
 
         </ComboBox>
         <Button Grid.ColumnSpan="2" Content="Apply" HorizontalAlignment="Left" Margin="150,349,0,0" VerticalAlignment="Top" Width="142" Height="38" Click="Button_Click"/>

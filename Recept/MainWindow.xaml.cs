@@ -48,11 +48,15 @@ namespace Recept
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var recipewindow = new ViewReceiepeWindow();
-            recipewindow.Owner = this;
-            recipewindow.Show();
-            Recipe r = recipelist.Load(RecipeBox.SelectedIndex, new Exception());
-            recipewindow.Viewer(r);
+            if (RecipeBox.SelectedIndex < 0)
+            {
+                var recipewindow = new ViewReceiepeWindow();
+                recipewindow.Owner = this;
+                recipewindow.SetWindow(this);
+                recipewindow.Show();
+                Recipe r = recipelist.Load(RecipeBox.SelectedIndex, new Exception());
+                recipewindow.Viewer(r);
+            }
         }
 
         private void GridViewColumnHeader_Click(object sender, RoutedEventArgs e) //Title header

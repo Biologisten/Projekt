@@ -22,6 +22,16 @@ namespace Recept
             return true;
         }
 
+        public void Save(int i, Recipe recipe, Exception error)
+        {
+            if (i < 0)
+            {
+                throw error;
+            }
+
+            list[i] = recipe;
+        }
+
         public Recipe Load(int i, Exception error)
         {
             if (i < 0)

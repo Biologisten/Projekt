@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Recept"
         mc:Ignorable="d"
         Title="Recept" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Width="312.241" Height="500">
-    <Grid>
+    <Grid Margin="0,0,-6,0">
         <ListView x:Name="RecipeBox" Margin="29,51,29,105">
         <ListView.View>
                 <GridView>
@@ -21,6 +21,6 @@
         </ListView>
         <Label Content="Recipe:" HorizontalAlignment="Left" Margin="29,25,0,0" VerticalAlignment="Top" Height="26" Width="57"/>
         <Button Content="Add new recipe" HorizontalAlignment="Left" Margin="29,371,0,0" VerticalAlignment="Top" Width="121" Height="32" Click="Button_Click"/>
-        <Button Content="Show recipe" HorizontalAlignment="Left" Margin="158,371,0,0" VerticalAlignment="Top" Width="119" Height="32" Click="Button_Click_1"/>
+        <Button Content="Show recipe" HorizontalAlignment="Left" Margin="164,371,0,0" VerticalAlignment="Top" Width="119" Height="32" Click="Button_Click_1"/>
     </Grid>
 </Window>

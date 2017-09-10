@@ -5,18 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Recept"
         mc:Ignorable="d"
-        Title="ViewReceiepeWindow" Height="460" Width="346" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+        Title="ViewReceiepeWindow" Height="460" Width="452" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
     <Grid>
         <Frame Content="" HorizontalAlignment="Left" Height="407" Margin="34,12,0,0" VerticalAlignment="Top" Width="277"/>
-        <Border HorizontalAlignment="Left" Height="407" Margin="34,12,0,0" VerticalAlignment="Top" Width="277"/>
-        <TextBox x:Name="_title" Text="Titel:" HorizontalAlignment="Left" Margin="34,12,0,0" VerticalAlignment="Top" Width="277" Height="27" BorderThickness="0"/>
-        <TextBox x:Name="_description" Text="Description:" HorizontalAlignment="Left" Margin="34,66,0,0" VerticalAlignment="Top" Height="94" Width="277" BorderThickness="0"/>
-        <TextBox x:Name="_ingredient" Text="Ingredients:" HorizontalAlignment="Left" Margin="34,160,0,0" VerticalAlignment="Top" Height="56" Width="277" IsReadOnly="True" BorderThickness="0"/>
-        <TextBox x:Name="_date" Text="Created:" HorizontalAlignment="Left" Margin="34,216,0,0" VerticalAlignment="Top" Height="27" Width="277" BorderThickness="0"/>
-        <TextBox x:Name="_category" Text="Category:" HorizontalAlignment="Left" Margin="34,270,0,0" VerticalAlignment="Top" Height="27" Width="234" BorderThickness="0"/>
-        <TextBox x:Name="_Country" Text="Country:" HorizontalAlignment="Left" Margin="34,297,0,0" VerticalAlignment="Top" Height="27" Width="234" BorderThickness="0"/>
-        <TextBox x:Name="_author" Text="Author:" HorizontalAlignment="Left" Margin="34,39,0,0" VerticalAlignment="Top" Width="277" Height="27" BorderThickness="0"/>
-        <TextBox x:Name="_update" Text="Latest Update:" HorizontalAlignment="Left" Margin="34,243,0,0" VerticalAlignment="Top" Height="27" Width="277" BorderThickness="0"/>
-        <Button x:Name="_save" Margin="122,390,130,12" Content="Save" Click="_save_Click" />
+        <Border HorizontalAlignment="Left" Height="407" Margin="34,12,0,0" VerticalAlignment="Top" Width="382"/>
+        <TextBox x:Name="_title" Text="Titel:" HorizontalAlignment="Left" Margin="34,12,0,0" VerticalAlignment="Top" Width="35" Height="27" BorderThickness="1,1,0,1"/>
+        <TextBox x:Name="_description" Text="Description:" HorizontalAlignment="Left" Margin="34,66,0,0" VerticalAlignment="Top" Height="19" Width="69" BorderThickness="0"/>
+        <Label x:Name="_date" Content="Created:" HorizontalAlignment="Left" Margin="34,266,0,0" VerticalAlignment="Top" Height="27" Width="277" BorderThickness="0"/>
+        <TextBox x:Name="_category" Text="Category:" HorizontalAlignment="Left" Margin="34,320,0,0" VerticalAlignment="Top" Height="27" Width="56" BorderThickness="0"/>
+        <Label x:Name="_country" HorizontalAlignment="Left" Margin="34,346,0,0" VerticalAlignment="Top" Height="28" Width="56" BorderThickness="0" Content="Country:"/>
+        <ComboBox x:Name="country_box" HorizontalAlignment="Left" Margin="90,347,0,0" VerticalAlignment="Top" Width="104" Height="27">
+
+        </ComboBox>
+        <TextBox x:Name="_author" Text="Author:" HorizontalAlignment="Left" Margin="34,39,0,0" VerticalAlignment="Top" Width="47" Height="27" BorderThickness="1,1,0,1"/>
+        <Label x:Name="_update" Content="Latest Update:" HorizontalAlignment="Left" Margin="34,293,0,0" VerticalAlignment="Top" Height="27" Width="277" BorderThickness="0"/>
+        <Button x:Name="_save" Margin="197,380,149,12" Content="Save" Click="_save_Click" />
+        <ComboBox x:Name="category_box" HorizontalAlignment="Left" Margin="90,320,0,0" VerticalAlignment="Top" Width="104" Height="26">
+            <ComboBoxItem Content="Fast Food" HorizontalAlignment="Left" Width="102"/>
+            <ComboBoxItem Content="Homemade" HorizontalAlignment="Left" Width="102"/>
+            <ComboBoxItem Content="Grilled" HorizontalAlignment="Left" Width="102"/>
+            <ComboBoxItem Content="Meat" HorizontalAlignment="Left" Width="102"/>
+            <ComboBoxItem Content="Vegetarian" HorizontalAlignment="Left" Width="102"/>
+            <ComboBoxItem Content="Other" HorizontalAlignment="Left" Width="102"/>
+        </ComboBox>
+        <ListView x:Name="ListView" HorizontalAlignment="Left" Height="101" VerticalAlignment="Top" Width="176" Margin="34,165,0,0">
+            <ListView.View>
+                <GridView AllowsColumnReorder="True">
+                    <GridViewColumn Width="75" Header="Name" DisplayMemberBinding="{Binding Path=Name}"/>
+                    <GridViewColumn Width="55" Header="Amount" DisplayMemberBinding="{Binding Path=Amount}"/>
+                    <GridViewColumn Width="50" Header="Unit" DisplayMemberBinding="{Binding Path=Unit}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="ingredientname" HorizontalAlignment="Left" Height="30" Margin="260,165,0,0" Padding="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Height="30" Margin="210,165,0,0" VerticalAlignment="Top" Padding="8"/>
+        <Label Content="Amount:" HorizontalAlignment="Left" Height="28" Margin="210,200,0,0" VerticalAlignment="Top" Padding="8"/>
+        <TextBox x:Name="ingredientamount" HorizontalAlignment="Left" Height="28" Margin="271,200,0,0" Padding="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"/>
+        <RadioButton x:Name="gram" Content="g" HorizontalAlignment="Left" Margin="380,246,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="milliliter" Content="ml" HorizontalAlignment="Left" Margin="340,266,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="kilogram" Content="kg" HorizontalAlignment="Left" Margin="411,246,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="deciliter" Content="dl" HorizontalAlignment="Left" Margin="377,266,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="liter" Content="L" HorizontalAlignment="Left" Margin="411,266,0,0" VerticalAlignment="Top" Width="26"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="210,240,0,0" VerticalAlignment="Top" Width="60" Height="26" Click="Button_Click_1"/>
+        <Button Content="Remove" HorizontalAlignment="Left" Margin="275,240,0,0" VerticalAlignment="Top" Width="60" Height="26" Click="Button_Click_2"/>
+        <RadioButton x:Name="mgram" Content="mg" HorizontalAlignment="Left" Margin="339,246,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="stycke" Content="st" HorizontalAlignment="Left" Margin="377,286,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="_title_input" HorizontalAlignment="Left" Margin="69,12,0,0" VerticalAlignment="Top" Width="242" Height="27" BorderThickness="0,1,1,1"/>
+        <TextBox x:Name="_author_input" HorizontalAlignment="Left" Margin="81,39,0,0" VerticalAlignment="Top" Width="230" Height="27" BorderThickness="0,1,1,1"/>
+        <TextBox x:Name="_description_input" HorizontalAlignment="Left" Margin="34,85,0,0" VerticalAlignment="Top" Height="75" Width="338" BorderThickness="1"/>
     </Grid>
 </Window>

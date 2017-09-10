@@ -169,17 +169,20 @@ namespace Recept
 
         private void Button_Click(object sender, RoutedEventArgs e) //Lägger till receptet i receptlistan
         {
-            Recipe recipe = new Recipe(titeltxt.Text, authortxt.Text, descriptiontxt.Text, ingredients, DateTime.Now, DateTime.Now, categorytxt.Text, countrybox.Text);
-            if (mainwindow.AddRecipe(recipe) == true)
+            if (titeltxt.Text != "" && authortxt.Text != "")
             {
-                mainwindow.RecipeBox.ItemsSource = mainwindow.recipelist.Sorterare("Source");
-                mainwindow.RecipeBox.Items.Refresh();
-                this.Close();
-            }
-            else
-            {
-                var error = new error();
-                error.ShowDialog();
+                Recipe recipe = new Recipe(titeltxt.Text, authortxt.Text, descriptiontxt.Text, ingredients, DateTime.Now, DateTime.Now, categorytxt.Text, countrybox.Text);
+                if (mainwindow.AddRecipe(recipe) == true)
+                {
+                    mainwindow.RecipeBox.ItemsSource = mainwindow.recipelist.Sorterare("Source");
+                    mainwindow.RecipeBox.Items.Refresh();
+                    this.Close();
+                }
+                else
+                {
+                    var error = new error();
+                    error.ShowDialog();
+                }
             }
         }
     }
