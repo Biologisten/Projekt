@@ -48,7 +48,7 @@ namespace Recept
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (RecipeBox.SelectedIndex < 0)
+            if (RecipeBox.SelectedIndex > 0)
             {
                 var recipewindow = new ViewReceiepeWindow();
                 recipewindow.Owner = this;
